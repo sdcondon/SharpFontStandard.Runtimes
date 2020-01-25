@@ -1,4 +1,4 @@
-name: Pack & Push
+name: Pack and Push
 
 on: [push]
 
@@ -15,10 +15,10 @@ jobs:
         nuget-version: '5.x'
 
     - name: Add private GitHub registry to NuGet
-      run: nuget sources add -name GPR -Source https://nuget.pkg.github.com/sdcondon/index.json -Username sdcondon -Password ${{ secrets.GITHUB_TOKEN }}
+      run: nuget sources add -name GPR -Source "https://nuget.pkg.github.com/sdcondon/index.json" -Username sdcondon -Password ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build packages
       run: nuget pack *.nuspec -Version 0.1.0-pre.20200125
 
     - name: Push packages
-      run: nuget push *.nupkg -Source GDR
+      run: nuget push *.nupkg -Source GPR
