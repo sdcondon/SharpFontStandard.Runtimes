@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>SharpFontStandard.Runtimes.WindowsOnly</id>
+        <version>$version$</version>
+        <description>FreeType runtime native libraries - for 32- and 64-bit Windows</description>
+        <authors>Simon Condon</authors>
+    </metadata>
+    
+    <files>
+      <file src="runtimes\win-x86\**" target="runtimes\win-x86" />
+      <file src="runtimes\win-x64\**" target="runtimes\win-x64" />
+    </files>
+</package>
