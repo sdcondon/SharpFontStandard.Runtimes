@@ -15,7 +15,7 @@ jobs:
       run: nuget sources add -name GPR -Source "https://nuget.pkg.github.com/sdcondon/index.json" -Username sdcondon -Password ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build packages
-      run: nuget pack *.nuspec -Version 1.0.0-pre.$(date +"%Y%m%d.%H%M%S")
+      run: nuget pack *.nuspec -Version 2.6.0-pre.$(date +"%Y%m%d.%H%M%S")
 
     - name: Push packages
       run: nuget push *.nupkg -Source GPR
