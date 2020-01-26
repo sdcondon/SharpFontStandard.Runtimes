@@ -1,0 +1,23 @@
+name: Push NuGet Package
+
+on: 
+  release:
+    types: [prereleased, published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - uses: nuget/setup-nuget@v1
+
+    - name: Add GitHub registry to NuGet
+      run: nuget sources add -name github -Source "https://nuget.pkg.github.com/sdcondon/index.json" -Username sdcondon -Password ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build packages
+      run: nuget pack *.nuspec -Version ${{ github.ref }}
+
+    - name: Push packages
+      run: nuget push *.nupkg -Source github
