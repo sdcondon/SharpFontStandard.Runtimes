@@ -3,10 +3,12 @@
   <metadata>
     <id>SharpFontStandard.Runtimes.WindowsOnly</id>
     <version>$version$</version>
+    <summary>32- and 64-bit FreeType Windows DLLs, packaged as architecture-specific native runtime dependencies.</summary>
     <description>32- and 64-bit FreeType Windows DLLs, packaged as architecture-specific native runtime dependencies.</description>
     <authors>Simon Condon</authors>
     <license type="expression">MIT</license>
     <repository type="git" url="https://github.com/sdcondon/SharpFontStandard.Runtimes.git" />
+    <projectUrl>https://github.com/sdcondon/SharpFontStandard.Runtimes</projectUrl>
   </metadata>
     
   <files>
