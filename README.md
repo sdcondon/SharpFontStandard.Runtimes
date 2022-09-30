@@ -6,7 +6,7 @@ Runtime dependencies for SharpFontStandard. That is, the [FreeType](https://www.
 
 ## Usage
 
-Just add the runtime package as a dependency along with SharpFontStandard. This will work for both applications and libraries.
+Just add the runtime package as a dependency along with SharpFontStandard. This will work for both applications and libraries (unlike packages that include the binaries as content files - which doesn't work very well when the thing consuming it is a library).
 
 ## Credit
 
